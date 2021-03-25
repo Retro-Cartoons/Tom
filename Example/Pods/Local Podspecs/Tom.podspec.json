@@ -1,0 +1,22 @@
+{
+  "name": "Tom",
+  "version": "0.1.0",
+  "summary": "A short description of Tom.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/demirciy/Tom",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "demirciy": "demirciy.software@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/demirciy/Tom.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "Tom/Classes/**/*"
+}
