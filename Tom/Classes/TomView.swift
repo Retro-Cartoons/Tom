@@ -67,7 +67,7 @@ private extension TomView {
         stackView.axis = configuration.axis
 
         self.addSubview(stackView)
-        stackView.pinToView(to: self)
+        stackView.pinView(to: self)
 
         addLinesToStackView()
     }

@@ -14,7 +14,7 @@ extension UIView {
 
 extension UIView {
 
-    func pinToView(to view: UIView) {
+    func pinView(to view: UIView) {
         self.translatesAutoresizingMaskIntoConstraints = false
 
         self.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
