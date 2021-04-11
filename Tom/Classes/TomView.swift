@@ -5,6 +5,7 @@
 //  Created by Yusuf Demirci on 30.03.21.
 //
 
+@IBDesignable
 final public class TomView: UIView {
 
     // MARK: Properties
@@ -18,19 +19,48 @@ final public class TomView: UIView {
     private var lineViews: [LineView] = []
     private var isAnimationEnabled: Bool = false
 
-    private let configuration: Configuration
-
-    public init(configuration: Configuration, frame: CGRect = .init()) {
-        self.configuration = configuration
-
-        super.init(frame: frame)
-
-        setup()
+//    private let configuration: Configuration
+    
+    public var axisAdapter: UILayoutConstraintAxis = .horizontal
+    @IBInspectable public var lineCount: Int = 8
+    @IBInspectable public var lineColor: UIColor = .black
+    @IBInspectable public var lineSpacing: CGFloat = 8
+    @IBInspectable public var minLineHeight: CGFloat = 8
+    @IBInspectable public var animationSpeed: Double = 0.25
+    @IBInspectable public var axis: Int {
+        get {
+            return self.axisAdapter.rawValue
+        }
+        set (axisType) {
+            self.axisAdapter = NSLayoutConstraint.Axis(rawValue: axisType) ?? .horizontal
+        }
     }
 
+    public init(configuration: Configuration) {
+        
+        super.init(frame: .zero)
+        
+        self.lineCount = configuration.lineCount
+        self.lineColor = configuration.lineColor
+        self.lineSpacing = configuration.lineSpacing
+        self.minLineHeight = configuration.minLineHeight
+        self.animationSpeed = configuration.animationSpeed
+        self.axis = configuration.axis.rawValue
+
+        
+        setup()
+    }
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setup()
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
 
 // MARK: - Publics
@@ -49,9 +79,9 @@ public extension TomView {
         isAnimationEnabled = false
 
         lineViews.forEach { [weak self] lineView in
-            lineView.heightConstraint?.constant = self?.configuration.minLineHeight ?? 0
+            lineView.heightConstraint?.constant = self?.minLineHeight ?? 8
 
-            UIView.animate(withDuration: configuration.animationSpeed) {
+            UIView.animate(withDuration: self?.animationSpeed ?? 0.25) {
                 self?.layoutIfNeeded()
             }
         }
@@ -63,8 +93,8 @@ public extension TomView {
 private extension TomView {
 
     func setup() {
-        stackView.spacing = configuration.lineSpacing
-        stackView.axis = configuration.axis
+        stackView.spacing = self.lineSpacing
+        stackView.axis = self.axisAdapter
 
         self.addSubview(stackView)
         stackView.pinView(to: self)
@@ -75,10 +105,10 @@ private extension TomView {
     func animate(lineView: UIView) {
         guard let maxHeight = lineView.superview?.frame.height else { return }
 
-        let newHeight = CGFloat.random(in: configuration.minLineHeight...maxHeight)
+        let newHeight = CGFloat.random(in: self.minLineHeight...maxHeight)
         lineView.heightConstraint?.constant = newHeight
 
-        UIView.animate(withDuration: configuration.animationSpeed) { [weak self] in
+        UIView.animate(withDuration: self.animationSpeed) { [weak self] in
             self?.layoutIfNeeded()
         } completion: { [weak self] _ in
             if self?.isAnimationEnabled ?? false {
@@ -88,10 +118,10 @@ private extension TomView {
     }
 
     func addLinesToStackView() {
-        for _ in 0 ..< configuration.lineCount {
+        for _ in 0 ..< self.lineCount {
             let lineView: LineView = .init(
                 configuration: .init(
-                    color: configuration.lineColor,
+                    color: self.lineColor,
                     cornerRadius: .rounded
                 )
             )
@@ -111,7 +141,7 @@ private extension TomView {
 
         lineView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 0).isActive = true
         lineView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: 0).isActive = true
-        lineView.heightAnchor.constraint(equalToConstant: configuration.minLineHeight).isActive = true
+        lineView.heightAnchor.constraint(equalToConstant: self.minLineHeight).isActive = true
         lineView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor, constant: 0).isActive = true
         lineView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor, constant: 0).isActive = true
     }
