@@ -9,6 +9,7 @@ class LineView: UIView {
 
     // MARK: Properties
 
+    /// Line configuration parameters.
     private let configuration: LineConfiguration
 
     init(configuration: LineConfiguration) {
@@ -39,6 +40,7 @@ class LineView: UIView {
 
 private extension LineView {
 
+    /// Set line background color as configurations color.
     func setup() {
         self.backgroundColor = configuration.color
     }
