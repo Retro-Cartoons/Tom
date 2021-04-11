@@ -6,7 +6,8 @@
 //
 
 extension UIView {
-
+    
+    /// Returns height contraint of related view.
     var heightConstraint: NSLayoutConstraint? {
         constraints.first { $0.firstAttribute == .height && $0.relation == .equal }
     }
@@ -14,6 +15,8 @@ extension UIView {
 
 extension UIView {
 
+    /// Pins edges to methods input view.
+    /// - Parameter view: Input parameter is type of UIView object or subobject of UIView type.
     func pinView(to view: UIView) {
         self.translatesAutoresizingMaskIntoConstraints = false
 
