@@ -15,12 +15,9 @@ final public class TomView: UIView {
         return view
     }()
 
-    /// Array that contains the lines within itself.
     private var lineViews: [LineView] = []
-    /// Represent the state of the animation.
     private var isAnimationEnabled: Bool = false
 
-    /// Configuration parameters for TomView.
     private let configuration: Configuration
 
     public init(configuration: Configuration, frame: CGRect = .init()) {
@@ -67,7 +64,6 @@ public extension TomView {
 
 private extension TomView {
 
-    /// Set configuration for TomView.
     func setup() {
         stackView.spacing = configuration.lineSpacing
         stackView.axis = configuration.axis
@@ -78,8 +74,6 @@ private extension TomView {
         addLinesToStackView()
     }
 
-    /// Start infitine animation while isAnimatonEnable parameter is true.
-    /// - Parameter lineView: Input parameter is type of UIView object or subobject of UIView type.
     func animate(lineView: UIView) {
         guard let maxHeight = lineView.superview?.frame.height else { return }
 
@@ -94,8 +88,7 @@ private extension TomView {
             }
         }
     }
-
-    /// Creates a LineView as many line count in the configuration.
+    
     func addLinesToStackView() {
         for _ in 0 ..< configuration.lineCount {
             let lineView: LineView = .init(
@@ -115,9 +108,6 @@ private extension TomView {
         }
     }
 
-    /// Pins lineView edges to containerView.
-    /// - Parameter lineView: Input parameter is type of UIView object or subobject of UIView type.
-    /// - Parameter containerView: Input parameter is type of UIView object or subobject of UIView type.
     func setLineConstraints(lineView: UIView, containerView: UIView) {
         lineView.translatesAutoresizingMaskIntoConstraints = false
 

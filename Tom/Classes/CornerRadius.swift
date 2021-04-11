@@ -7,10 +7,7 @@
 
 import Foundation
 
-/// Keys that specify a corner radius type.
 enum CornerRadius {
-    /// Keys that specify corner radius half of view's height.
     case rounded
-    /// Keys that specify corner radius for developer selected radius
     case custom(CGFloat)
 }
