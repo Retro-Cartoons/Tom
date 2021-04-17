@@ -15,7 +15,7 @@ jobs:
     
     env:
       XC_VERSION: ${{ '12.4' }}
-      XC_WORKSPACE: ${{ 'Tom.xcworkspace' }}
+      XC_WORKSPACE: ${{ 'Example/Tom.xcworkspace' }}
       XC_SCHEME: ${{ 'Tom-Example' }}
       
     steps:
@@ -24,11 +24,3 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run Unit and UI Tests
       run: /usr/bin/xcodebuild test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 11'
-
-#     steps:
-#     - name: Checkout
-#       uses: actions/checkout@v1
-#     - name: Bundle Install
-#       run: bundle install
-#     - name: Build and test
-#       run: bundle exec fastlane scan --destination "${destination}" --scheme "Tom-Example"
