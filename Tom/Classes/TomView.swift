@@ -19,7 +19,7 @@ final public class TomView: UIView {
     private var lineViews: [LineView] = []
     private var isAnimationEnabled: Bool = false
 
-//    private let configuration: Configuration
+    private var configuration = Configuration(lineCount: 4, lineColor: .black)
     
     public var axisAdapter: UILayoutConstraintAxis = .horizontal
     @IBInspectable public var lineCount: Int = 8
@@ -35,30 +35,28 @@ final public class TomView: UIView {
             self.axisAdapter = NSLayoutConstraint.Axis(rawValue: axisType) ?? .horizontal
         }
     }
-
+    
     public init(configuration: Configuration) {
-        
         super.init(frame: .zero)
         
-        self.lineCount = configuration.lineCount
-        self.lineColor = configuration.lineColor
-        self.lineSpacing = configuration.lineSpacing
-        self.minLineHeight = configuration.minLineHeight
-        self.animationSpeed = configuration.animationSpeed
-        self.axis = configuration.axis.rawValue
-
-        
-        setup()
-    }
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+        self.configuration = configuration
+        self.axis = axisAdapter.rawValue
         
         setup()
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        
+        self.configuration = Configuration(lineCount: self.lineCount,
+                                           lineColor: self.lineColor,
+                                           spacing: self.lineSpacing,
+                                           minLineHeight: self.minLineHeight,
+                                           animationSpeed: self.animationSpeed)
+        self.axis = self.axisAdapter.rawValue
+        
+        setup()
+        layoutIfNeeded()
     }
     
 }
