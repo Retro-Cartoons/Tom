@@ -10,12 +10,6 @@ final public class TomView: UIView {
 
     // MARK: Properties
     
-    public var axisAdapter: UILayoutConstraintAxis = .horizontal {
-        didSet {
-            setup()
-        }
-    }
-    
     @IBInspectable
     public var lineCount: Int = 8 {
         didSet {
@@ -38,7 +32,7 @@ final public class TomView: UIView {
     }
     
     @IBInspectable
-    public var minLineHeight: CGFloat = 8 {
+    public var minLineThickness: CGFloat = 8 {
         didSet {
             setup()
         }
@@ -52,12 +46,18 @@ final public class TomView: UIView {
     }
     
     @IBInspectable
-    public var axis: Int {
+    public var Vertical: Bool {
         get {
-            return self.axisAdapter.rawValue
+            return self.axis == .vertical
         }
         set {
-            self.axisAdapter = NSLayoutConstraint.Axis(rawValue: newValue) ?? .horizontal
+            self.axis = newValue ? .vertical : .horizontal
+        }
+    }
+
+    private var axis: UILayoutConstraintAxis = .horizontal {
+        didSet {
+            setup()
         }
     }
     
@@ -76,9 +76,9 @@ final public class TomView: UIView {
         self.lineCount = configuration.lineCount
         self.lineColor = configuration.lineColor
         self.lineSpacing = configuration.lineSpacing
-        self.minLineHeight = configuration.minLineHeight
+        self.minLineThickness = configuration.minLineThickness
         self.animationSpeed = configuration.animationSpeed
-        self.axis = configuration.axis.rawValue
+        self.axis = configuration.axis
         
         setup()
     }
@@ -114,7 +114,12 @@ public extension TomView {
         isAnimationEnabled = false
 
         lineViews.forEach { [weak self] lineView in
-            lineView.heightConstraint?.constant = minLineHeight
+            switch axis {
+            case .horizontal:
+                lineView.heightConstraint?.constant = minLineThickness
+            case .vertical:
+                lineView.widthConstraint?.constant = minLineThickness
+            }
 
             UIView.animate(withDuration: animationSpeed) {
                 self?.layoutIfNeeded()
@@ -128,7 +133,7 @@ private extension TomView {
 
     func setup() {
         stackView.spacing = self.lineSpacing
-        stackView.axis = self.axisAdapter
+        stackView.axis = self.axis
 
         stackView.removeFromSuperview()
         self.addSubview(stackView)
@@ -138,16 +143,32 @@ private extension TomView {
     }
 
     func animate(lineView: UIView) {
-        guard let maxHeight = lineView.superview?.frame.height else { return }
+        switch axis {
+        case .horizontal:
+            guard let maxHeight = lineView.superview?.frame.height else { return }
 
-        let newHeight = CGFloat.random(in: minLineHeight...maxHeight)
-        lineView.heightConstraint?.constant = newHeight
+            let newHeight = CGFloat.random(in: minLineThickness...maxHeight)
+            lineView.heightConstraint?.constant = newHeight
 
-        UIView.animate(withDuration: animationSpeed) { [weak self] in
-            self?.layoutIfNeeded()
-        } completion: { [weak self] _ in
-            if self?.isAnimationEnabled ?? false {
-                self?.animate(lineView: lineView)
+            UIView.animate(withDuration: animationSpeed) { [weak self] in
+                self?.layoutIfNeeded()
+            } completion: { [weak self] _ in
+                if self?.isAnimationEnabled ?? false {
+                    self?.animate(lineView: lineView)
+                }
+            }
+        case .vertical:
+            guard let maxWidth = lineView.superview?.frame.width else { return }
+
+            let newWidth = CGFloat.random(in: minLineThickness...maxWidth)
+            lineView.widthConstraint?.constant = newWidth
+
+            UIView.animate(withDuration: animationSpeed) { [weak self] in
+                self?.layoutIfNeeded()
+            } completion: { [weak self] _ in
+                if self?.isAnimationEnabled ?? false {
+                    self?.animate(lineView: lineView)
+                }
             }
         }
     }
@@ -177,10 +198,18 @@ private extension TomView {
     func setLineConstraints(lineView: UIView, containerView: UIView) {
         lineView.translatesAutoresizingMaskIntoConstraints = false
 
-        lineView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 0).isActive = true
-        lineView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: 0).isActive = true
-        lineView.heightAnchor.constraint(equalToConstant: minLineHeight).isActive = true
         lineView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor, constant: 0).isActive = true
         lineView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor, constant: 0).isActive = true
+
+        switch axis {
+        case .horizontal:
+            lineView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 0).isActive = true
+            lineView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: 0).isActive = true
+            lineView.heightAnchor.constraint(equalToConstant: minLineThickness).isActive = true
+        case .vertical:
+            lineView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0).isActive = true
+            lineView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0).isActive = true
+            lineView.widthAnchor.constraint(equalToConstant: minLineThickness).isActive = true
+        }
     }
 }

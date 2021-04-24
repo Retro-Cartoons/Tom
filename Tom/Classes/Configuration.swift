@@ -15,21 +15,23 @@ public struct Configuration {
     /// Determines spacing between each line.
     public let lineSpacing: CGFloat
     /// /// Determines axis of lines, horizontal or vertical.
-    public let axis: UILayoutConstraintAxis = .horizontal
-    /// Determines minimum line height in TomView
-    public let minLineHeight: CGFloat
+    public let axis: UILayoutConstraintAxis
+    /// Determines minimum line thickness in TomView
+    public let minLineThickness: CGFloat
     /// Determines animation duration for the line animation.
     public let animationSpeed: TimeInterval
 
     public init(lineCount: Int,
                 lineColor: UIColor,
-                spacing: CGFloat = 8,
+                lineSpacing: CGFloat = 8,
+                axis: UILayoutConstraintAxis = .horizontal,
                 minLineHeight: CGFloat = 8,
                 animationSpeed: TimeInterval = 0.25) {
         self.lineCount = lineCount
         self.lineColor = lineColor
-        self.lineSpacing = spacing
-        self.minLineHeight = minLineHeight
+        self.lineSpacing = lineSpacing
+        self.axis = axis
+        self.minLineThickness = minLineHeight
         self.animationSpeed = animationSpeed
     }
 }
