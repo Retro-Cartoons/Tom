@@ -5,6 +5,7 @@
 //  Created by Yusuf Demirci on 30.03.21.
 //
 
+@IBDesignable
 final public class TomView: UIView {
 
     // MARK: Properties
@@ -17,24 +18,80 @@ final public class TomView: UIView {
 
     private var lineViews: [LineView] = []
     private var isAnimationEnabled: Bool = false
-
-    private let configuration: Configuration
-
-    public init(configuration: Configuration, frame: CGRect = .init()) {
-        self.configuration = configuration
-
-        super.init(frame: frame)
-
+    
+    public var axisAdapter: UILayoutConstraintAxis = .horizontal {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable public var lineCount: Int = 8 {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable public var lineColor: UIColor = .black {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable public var lineSpacing: CGFloat = 8 {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable public var minLineHeight: CGFloat = 8 {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable public var animationSpeed: Double = 0.25 {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable public var axis: Int {
+        get {
+            return self.axisAdapter.rawValue
+        }
+        set {
+            self.axisAdapter = NSLayoutConstraint.Axis(rawValue: newValue) ?? .horizontal
+        }
+    }
+    
+    public init(configuration: Configuration) {
+        super.init(frame: .zero)
+        
+        self.lineCount = configuration.lineCount
+        self.lineColor = configuration.lineColor
+        self.lineSpacing = configuration.lineSpacing
+        self.minLineHeight = configuration.minLineHeight
+        self.animationSpeed = configuration.animationSpeed
+        self.axis = configuration.axis.rawValue
+        
         setup()
     }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setup()
     }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        setup()
+    }
+    
 }
 
 // MARK: - Publics
-
 public extension TomView {
 
     /// Starts animation for each lines
@@ -51,9 +108,9 @@ public extension TomView {
         isAnimationEnabled = false
 
         lineViews.forEach { [weak self] lineView in
-            lineView.heightConstraint?.constant = self?.configuration.minLineHeight ?? 0
+            lineView.heightConstraint?.constant = minLineHeight
 
-            UIView.animate(withDuration: configuration.animationSpeed) {
+            UIView.animate(withDuration: animationSpeed) {
                 self?.layoutIfNeeded()
             }
         }
@@ -61,13 +118,13 @@ public extension TomView {
 }
 
 // MARK: - Privates
-
 private extension TomView {
 
     func setup() {
-        stackView.spacing = configuration.lineSpacing
-        stackView.axis = configuration.axis
+        stackView.spacing = self.lineSpacing
+        stackView.axis = self.axisAdapter
 
+        stackView.removeFromSuperview()
         self.addSubview(stackView)
         stackView.pinView(to: self)
 
@@ -77,10 +134,10 @@ private extension TomView {
     func animate(lineView: UIView) {
         guard let maxHeight = lineView.superview?.frame.height else { return }
 
-        let newHeight = CGFloat.random(in: configuration.minLineHeight...maxHeight)
+        let newHeight = CGFloat.random(in: minLineHeight...maxHeight)
         lineView.heightConstraint?.constant = newHeight
 
-        UIView.animate(withDuration: configuration.animationSpeed) { [weak self] in
+        UIView.animate(withDuration: animationSpeed) { [weak self] in
             self?.layoutIfNeeded()
         } completion: { [weak self] _ in
             if self?.isAnimationEnabled ?? false {
@@ -90,10 +147,13 @@ private extension TomView {
     }
     
     func addLinesToStackView() {
-        for _ in 0 ..< configuration.lineCount {
+        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        lineViews.removeAll()
+        
+        for _ in 0 ..< lineCount {
             let lineView: LineView = .init(
                 configuration: .init(
-                    color: configuration.lineColor,
+                    color: self.lineColor,
                     cornerRadius: .rounded
                 )
             )
@@ -113,7 +173,7 @@ private extension TomView {
 
         lineView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 0).isActive = true
         lineView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: 0).isActive = true
-        lineView.heightAnchor.constraint(equalToConstant: configuration.minLineHeight).isActive = true
+        lineView.heightAnchor.constraint(equalToConstant: minLineHeight).isActive = true
         lineView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor, constant: 0).isActive = true
         lineView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor, constant: 0).isActive = true
     }
