@@ -25,13 +25,13 @@ public struct Configuration {
                 lineColor: UIColor,
                 lineSpacing: CGFloat = 8,
                 axis: UILayoutConstraintAxis = .horizontal,
-                minLineHeight: CGFloat = 8,
+                minLineThickness: CGFloat = 8,
                 animationSpeed: TimeInterval = 0.25) {
         self.lineCount = lineCount
         self.lineColor = lineColor
         self.lineSpacing = lineSpacing
         self.axis = axis
-        self.minLineThickness = minLineHeight
+        self.minLineThickness = minLineThickness
         self.animationSpeed = animationSpeed
     }
 }
