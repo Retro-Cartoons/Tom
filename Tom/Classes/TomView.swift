@@ -9,7 +9,58 @@
 final public class TomView: UIView {
 
     // MARK: Properties
-
+    
+    public var axisAdapter: UILayoutConstraintAxis = .horizontal {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable
+    public var lineCount: Int = 8 {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable
+    public var lineColor: UIColor = .black {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable
+    public var lineSpacing: CGFloat = 8 {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable
+    public var minLineHeight: CGFloat = 8 {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable
+    public var animationSpeed: Double = 0.25 {
+        didSet {
+            setup()
+        }
+    }
+    
+    @IBInspectable
+    public var axis: Int {
+        get {
+            return self.axisAdapter.rawValue
+        }
+        set {
+            self.axisAdapter = NSLayoutConstraint.Axis(rawValue: newValue) ?? .horizontal
+        }
+    }
+    
     private let stackView: UIStackView = {
         let view: UIStackView = .init()
         view.distribution = .fillEqually
@@ -18,51 +69,6 @@ final public class TomView: UIView {
 
     private var lineViews: [LineView] = []
     private var isAnimationEnabled: Bool = false
-    
-    public var axisAdapter: UILayoutConstraintAxis = .horizontal {
-        didSet {
-            setup()
-        }
-    }
-    
-    @IBInspectable public var lineCount: Int = 8 {
-        didSet {
-            setup()
-        }
-    }
-    
-    @IBInspectable public var lineColor: UIColor = .black {
-        didSet {
-            setup()
-        }
-    }
-    
-    @IBInspectable public var lineSpacing: CGFloat = 8 {
-        didSet {
-            setup()
-        }
-    }
-    
-    @IBInspectable public var minLineHeight: CGFloat = 8 {
-        didSet {
-            setup()
-        }
-    }
-    
-    @IBInspectable public var animationSpeed: Double = 0.25 {
-        didSet {
-            setup()
-        }
-    }
-    
-    @IBInspectable public var axis: Int {
-        get {
-            return self.axisAdapter.rawValue
-        }
-        set {
-            self.axisAdapter = NSLayoutConstraint.Axis(rawValue: newValue) ?? .horizontal
-        }
-    }
     
     public init(configuration: Configuration) {
         super.init(frame: .zero)
