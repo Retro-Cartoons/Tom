@@ -10,6 +10,10 @@ extension UIView {
     var heightConstraint: NSLayoutConstraint? {
         constraints.first { $0.firstAttribute == .height && $0.relation == .equal }
     }
+
+    var widthConstraint: NSLayoutConstraint? {
+        constraints.first { $0.firstAttribute == .width && $0.relation == .equal }
+    }
 }
 
 extension UIView {
