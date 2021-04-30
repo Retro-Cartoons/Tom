@@ -13,7 +13,9 @@ class ViewController: UIViewController {
 
     // MARK: Properties
 
-    private lazy var tomView = TomView(configuration: .init(lineCount: 20, lineColor: retroCartoonsBlack))
+    
+    @IBOutlet weak var tomView: TomView!
+    //    private lazy var tomView = TomView(configuration: .init(lineCount: 20, lineColor: retroCartoonsBlack))
     private lazy var actionButtonStackView: UIStackView = {
         let view: UIStackView = .init(arrangedSubviews: [startButton, stopButton])
         view.axis = .horizontal
@@ -45,8 +47,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = retroCartoonsYellow
+        tomView.backgroundColor = retroCartoonsYellow
 
-        addTomView()
+//        addTomView()
         addButtons()
     }
 
