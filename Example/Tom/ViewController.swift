@@ -6,6 +6,7 @@
 //  Copyright (c) 2021 demirciy. All rights reserved.
 //
 
+import AVKit
 import Tom
 import UIKit
 
@@ -13,22 +14,33 @@ class ViewController: UIViewController {
 
     // MARK: Properties
 
+    @IBOutlet weak var playerContainerView: UIView!
     @IBOutlet weak var tomView: TomView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
-    
-    /* Remove comment to programmatically implementation work
-    private lazy var tomView = TomView(configuration: .init(lineCount: 20, lineColor: retroCartoonsBlack))
-    */
+
+    private let playerController: AVPlayerViewController = {
+        let controller: AVPlayerViewController = .init()
+        controller.showsPlaybackControls = false
+        return controller
+    }()
+    private var playerStatusObserver: Any?
+
+    // MARK: Actions
+
+    @IBAction func startAction(_ sender: UIButton) {
+        playerController.player?.play()
+    }
+
+    @IBAction func stopAction(_ sender: UIButton) {
+        playerController.player?.pause()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tomView.backgroundColor = UIColor(named: "retroCartoonsYellow")
-
-        /* Remove comment to programmatically implementation work
-        addTomView()
-        */
+        setupPlayer()
+        observePlayer()
     }
 
     override func viewDidLayoutSubviews() {
@@ -37,34 +49,37 @@ class ViewController: UIViewController {
         startButton.layer.cornerRadius = min(startButton.frame.width, startButton.frame.height) / 2
         stopButton.layer.cornerRadius = min(stopButton.frame.width, stopButton.frame.height) / 2
     }
-    
-    @IBAction func startAction(_ sender: UIButton) {
-        tomView.start()
-    }
-    
-    @IBAction func stopAction(_ sender: UIButton) {
-        tomView.stop()
-    }
 }
 
 // MARK: - Privates
 
 private extension ViewController {
 
-    func addTomView() {
-        self.view.addSubview(tomView)
+    func setupPlayer() {
+        playerContainerView.addSubview(playerController.view)
+        playerController.view.pinView(to: playerContainerView)
 
-        tomView.translatesAutoresizingMaskIntoConstraints = false
+        guard let exampleVideoPath = Bundle.main.path(forResource: "ExampleVideo", ofType: "mp4") else {
+            debugPrint("Example video not found")
+            return
+        }
 
-        tomView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 64)
-            .isActive = true
-        tomView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -64)
-            .isActive = true
-        tomView.heightAnchor.constraint(equalToConstant: 200)
-            .isActive = true
-        tomView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -100)
-            .isActive = true
-        tomView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-            .isActive = true
+        let exampleVideoUrl = URL(fileURLWithPath: exampleVideoPath)
+
+        let player: AVPlayer = .init(url: exampleVideoUrl)
+        playerController.player = player
+    }
+
+    func observePlayer() {
+        playerStatusObserver = playerController.player?.observe(\.timeControlStatus, options: [.new], changeHandler: { player, _ in
+            switch player.timeControlStatus {
+            case .playing:
+                self.tomView.start()
+            case .paused:
+                self.tomView.stop()
+            default:
+                break
+            }
+        })
     }
 }
