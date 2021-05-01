@@ -48,14 +48,47 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="dE1-BO-tBb">
+                                <rect key="frame" x="48" y="392" width="279" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-lM-Meq">
+                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="50"/>
+                                        <color key="backgroundColor" red="0.13725490196078433" green="0.082352941176470587" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" red="0.89411764705882346" green="0.72941176470588232" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dzC-Lk-WL1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8z-Qn-dLS">
+                                        <rect key="frame" x="155.5" y="0.0" width="123.5" height="50"/>
+                                        <color key="backgroundColor" red="0.13725490200000001" green="0.08235294118" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" red="0.89411764705882346" green="0.72941176470588232" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iRx-yt-jwO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JhH-Pz-Ra3"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dE1-BO-tBb" secondAttribute="trailing" constant="32" id="1tv-gC-0kF"/>
                             <constraint firstItem="W4b-jI-vGs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="128" id="BAM-ji-fEU"/>
+                            <constraint firstItem="dE1-BO-tBb" firstAttribute="top" secondItem="W4b-jI-vGs" secondAttribute="bottom" constant="128" id="EvX-9P-Mqr"/>
                             <constraint firstItem="W4b-jI-vGs" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="N5D-ps-Gkg"/>
+                            <constraint firstItem="dE1-BO-tBb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="32" id="nqX-qg-qkK"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="startButton" destination="Ngp-lM-Meq" id="ThY-lW-Kg8"/>
+                        <outlet property="stopButton" destination="J8z-Qn-dLS" id="Ajj-US-YCk"/>
                         <outlet property="tomView" destination="W4b-jI-vGs" id="bYy-Ab-XO6"/>
                     </connections>
                 </viewController>

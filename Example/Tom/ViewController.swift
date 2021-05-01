@@ -13,9 +13,14 @@ class ViewController: UIViewController {
 
     // MARK: Properties
 
-    
     @IBOutlet weak var tomView: TomView!
-    //    private lazy var tomView = TomView(configuration: .init(lineCount: 20, lineColor: retroCartoonsBlack))
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
+    /* Remove comment to programmatically implementation work
+    private lazy var tomView = TomView(configuration: .init(lineCount: 20, lineColor: retroCartoonsBlack))
+    */
+    
     private lazy var actionButtonStackView: UIStackView = {
         let view: UIStackView = .init(arrangedSubviews: [startButton, stopButton])
         view.axis = .horizontal
@@ -23,6 +28,8 @@ class ViewController: UIViewController {
         view.distribution = .fillEqually
         return view
     }()
+    
+    /* Remove comment to programmatically implementation work
     private lazy var startButton: UIButton = {
         let button: UIButton = .init()
         button.backgroundColor = retroCartoonsBlack
@@ -39,7 +46,8 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(stopAction), for: .touchUpInside)
         return button
     }()
-
+    */
+    
     private let retroCartoonsYellow: UIColor = .init(red: 228 / 255, green: 186 / 255, blue: 94 / 255, alpha: 1)
     private let retroCartoonsBlack: UIColor = .init(red: 35 / 255, green: 21 / 255, blue: 24 / 255, alpha: 1)
 
@@ -49,8 +57,10 @@ class ViewController: UIViewController {
         view.backgroundColor = retroCartoonsYellow
         tomView.backgroundColor = retroCartoonsYellow
 
-//        addTomView()
+        /* Remove comment to programmatically implementation work
+        addTomView()
         addButtons()
+        */
     }
 
     override func viewDidLayoutSubviews() {
@@ -59,6 +69,15 @@ class ViewController: UIViewController {
         startButton.layer.cornerRadius = min(startButton.frame.width, startButton.frame.height) / 2
         stopButton.layer.cornerRadius = min(stopButton.frame.width, stopButton.frame.height) / 2
     }
+    
+    @IBAction func startAction(_ sender: UIButton) {
+        tomView.start()
+    }
+    
+    @IBAction func stopAction(_ sender: UIButton) {
+        tomView.stop()
+    }
+    
 }
 
 // MARK: - Privates
