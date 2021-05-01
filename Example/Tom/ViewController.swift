@@ -20,46 +20,14 @@ class ViewController: UIViewController {
     /* Remove comment to programmatically implementation work
     private lazy var tomView = TomView(configuration: .init(lineCount: 20, lineColor: retroCartoonsBlack))
     */
-    
-    private lazy var actionButtonStackView: UIStackView = {
-        let view: UIStackView = .init(arrangedSubviews: [startButton, stopButton])
-        view.axis = .horizontal
-        view.spacing = 32
-        view.distribution = .fillEqually
-        return view
-    }()
-    
-    /* Remove comment to programmatically implementation work
-    private lazy var startButton: UIButton = {
-        let button: UIButton = .init()
-        button.backgroundColor = retroCartoonsBlack
-        button.setTitleColor(retroCartoonsYellow, for: .normal)
-        button.setTitle("Start", for: .normal)
-        button.addTarget(self, action: #selector(startAction), for: .touchUpInside)
-        return button
-    }()
-    private lazy var stopButton: UIButton = {
-        let button: UIButton = .init()
-        button.backgroundColor = retroCartoonsBlack
-        button.setTitleColor(retroCartoonsYellow, for: .normal)
-        button.setTitle("Stop", for: .normal)
-        button.addTarget(self, action: #selector(stopAction), for: .touchUpInside)
-        return button
-    }()
-    */
-    
-    private let retroCartoonsYellow: UIColor = .init(red: 228 / 255, green: 186 / 255, blue: 94 / 255, alpha: 1)
-    private let retroCartoonsBlack: UIColor = .init(red: 35 / 255, green: 21 / 255, blue: 24 / 255, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = retroCartoonsYellow
-        tomView.backgroundColor = retroCartoonsYellow
+        tomView.backgroundColor = UIColor(named: "retroCartoonsYellow")
 
         /* Remove comment to programmatically implementation work
         addTomView()
-        addButtons()
         */
     }
 
@@ -77,20 +45,11 @@ class ViewController: UIViewController {
     @IBAction func stopAction(_ sender: UIButton) {
         tomView.stop()
     }
-    
 }
 
 // MARK: - Privates
 
 private extension ViewController {
-
-    @objc func startAction() {
-        tomView.start()
-    }
-
-    @objc func stopAction() {
-        tomView.stop()
-    }
 
     func addTomView() {
         self.view.addSubview(tomView)
@@ -106,21 +65,6 @@ private extension ViewController {
         tomView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -100)
             .isActive = true
         tomView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-            .isActive = true
-    }
-
-    func addButtons() {
-        self.view.addSubview(actionButtonStackView)
-
-        actionButtonStackView.translatesAutoresizingMaskIntoConstraints = false
-
-        actionButtonStackView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 32)
-            .isActive = true
-        actionButtonStackView.topAnchor.constraint(equalTo: tomView.bottomAnchor, constant: 128)
-            .isActive = true
-        actionButtonStackView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -32)
-            .isActive = true
-        actionButtonStackView.heightAnchor.constraint(equalToConstant: 50)
             .isActive = true
     }
 }

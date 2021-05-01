@@ -4,7 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +22,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4b-jI-vGs" customClass="TomView" customModule="Tom">
                                 <rect key="frame" x="67.5" y="128" width="240" height="136"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="retroCartoonsYellow"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="LHj-K3-Jy7"/>
                                     <constraint firstAttribute="height" constant="136" id="xGe-z5-XlO"/>
@@ -53,9 +53,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-lM-Meq">
                                         <rect key="frame" x="0.0" y="0.0" width="123.5" height="50"/>
-                                        <color key="backgroundColor" red="0.13725490196078433" green="0.082352941176470587" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="retroCartoonsBlack"/>
                                         <state key="normal" title="Start">
-                                            <color key="titleColor" red="0.89411764705882346" green="0.72941176470588232" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" name="retroCartoonsYellow"/>
                                         </state>
                                         <connections>
                                             <action selector="startAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dzC-Lk-WL1"/>
@@ -63,9 +63,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8z-Qn-dLS">
                                         <rect key="frame" x="155.5" y="0.0" width="123.5" height="50"/>
-                                        <color key="backgroundColor" red="0.13725490200000001" green="0.08235294118" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="retroCartoonsBlack"/>
                                         <state key="normal" title="Stop">
-                                            <color key="titleColor" red="0.89411764705882346" green="0.72941176470588232" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" name="retroCartoonsYellow"/>
                                         </state>
                                         <connections>
                                             <action selector="stopAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iRx-yt-jwO"/>
@@ -77,7 +77,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="retroCartoonsYellow"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="dE1-BO-tBb" secondAttribute="trailing" constant="32" id="1tv-gC-0kF"/>
                             <constraint firstItem="W4b-jI-vGs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="128" id="BAM-ji-fEU"/>
@@ -98,8 +98,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="retroCartoonsBlack">
+            <color red="0.13725490200000001" green="0.08235294118" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="retroCartoonsYellow">
+            <color red="0.89411764709999997" green="0.72941176470000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
