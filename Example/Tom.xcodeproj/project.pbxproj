@@ -15,8 +15,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		611F87D41EA672AFA3EBEBF4 /* Pods_Tom_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF3965F5CCF96F296D5B441 /* Pods_Tom_Tests.framework */; };
-		C94F6E89263D9DBC00A33877 /* ExampleVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C94F6E88263D9DBC00A33877 /* ExampleVideo.mp4 */; };
 		C94F6E8F263D9FDE00A33877 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F6E8E263D9FDE00A33877 /* UIView+Extension.swift */; };
+		C94F6E97263DACA000A33877 /* ExampleVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C94F6E96263DACA000A33877 /* ExampleVideo.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,8 @@
 		8F7D9060EF4096D43A5E400D /* Pods-Tom_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tom_Tests.release.xcconfig"; path = "Target Support Files/Pods-Tom_Tests/Pods-Tom_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9E63007BCC2C4D805420A3BE /* Tom.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Tom.podspec; path = ../Tom.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A719797FEE836C9355FA760A /* Pods-Tom_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tom_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tom_Tests/Pods-Tom_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C94F6E88263D9DBC00A33877 /* ExampleVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExampleVideo.mp4; sourceTree = "<group>"; };
 		C94F6E8E263D9FDE00A33877 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C94F6E96263DACA000A33877 /* ExampleVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExampleVideo.mp4; sourceTree = "<group>"; };
 		F891A45F83F6911EBF9E6DF6 /* Pods_Tom_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tom_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,7 +117,7 @@
 		607FACD21AFB9204008FA782 /* Example for Tom */ = {
 			isa = PBXGroup;
 			children = (
-				C94F6E88263D9DBC00A33877 /* ExampleVideo.mp4 */,
+				C94F6E96263DACA000A33877 /* ExampleVideo.mp4 */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				C94F6E8E263D9FDE00A33877 /* UIView+Extension.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -254,7 +254,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				C94F6E89263D9DBC00A33877 /* ExampleVideo.mp4 in Resources */,
+				C94F6E97263DACA000A33877 /* ExampleVideo.mp4 in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
