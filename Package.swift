@@ -12,7 +12,8 @@ let package = Package(
         .library(name: "Tom", targets: ["Tom"]),
     ],
     targets: [
-        .target(name: "Tom", dependencies: []),
+        .target(name: "Tom", path: "Source/Tom/Classes", linkerSettings: []),
         .testTarget(name: "TomTests", dependencies: ["Tom"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
