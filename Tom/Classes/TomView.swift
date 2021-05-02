@@ -55,7 +55,7 @@ final public class TomView: UIView {
         }
     }
 
-    private var axis: UILayoutConstraintAxis = .horizontal {
+    private var axis: NSLayoutConstraint.Axis = .horizontal {
         didSet {
             setup()
         }
@@ -119,6 +119,8 @@ public extension TomView {
                 lineView.heightConstraint?.constant = minLineThickness
             case .vertical:
                 lineView.widthConstraint?.constant = minLineThickness
+            @unknown default:
+                break
             }
 
             UIView.animate(withDuration: animationSpeed) {
@@ -170,6 +172,8 @@ private extension TomView {
                     self?.animate(lineView: lineView)
                 }
             }
+        @unknown default:
+            break
         }
     }
     
@@ -210,6 +214,8 @@ private extension TomView {
             lineView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0).isActive = true
             lineView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0).isActive = true
             lineView.widthAnchor.constraint(equalToConstant: minLineThickness).isActive = true
+        @unknown default:
+            break
         }
     }
 }
