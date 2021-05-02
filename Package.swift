@@ -12,7 +12,7 @@ let package = Package(
         .library(name: "Tom", targets: ["Tom"]),
     ],
     targets: [
-        .target(name: "Tom", path: "Sources/Tom/Classes"),
+        .target(name: "Tom", path: "Sources/Tom/Classes", exclude: ["Example"]),
         .testTarget(name: "TomTests", dependencies: ["Tom"]),
     ],
     swiftLanguageVersions: [.v5]
