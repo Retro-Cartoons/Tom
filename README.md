@@ -2,13 +2,14 @@
 
 [![CI Status](https://github.com/Retro-Cartoons/Tom/workflows/Tom%20CI/badge.svg?branch=main)](https://github.com/Retro-Cartoons/Tom/actions)
 [![Version](https://img.shields.io/cocoapods/v/Tom.svg)](https://github.com/Retro-Cartoons/Tom)
+[![SPM Compatible](https://img.shields.io/badge/SPM-1.0.0-brightgreen.svg)](https://swift.org/package-manager)
 [![License](https://img.shields.io/cocoapods/l/Tom.svg)](https://github.com/Retro-Cartoons/Tom)
 [![Platform](https://img.shields.io/cocoapods/p/Tom.svg)](https://github.com/Retro-Cartoons/Tom)
-[![SPM Compatible](https://img.shields.io/badge/SPM-1.0.0-brightgreen.svg)](https://swift.org/package-manager)
 
 - [Demo](#demo)
 - [Requirements](#requirements)
 - [Installation](#installation)
+  - [SPM](#Swift Package Manager)
   - [Cocoapods](#cocoapods)
 - [Usage](#usage)
   - [XIB](#xib)
@@ -27,10 +28,10 @@
 
 ## Installation
 
-## Swift Package Manager
+### Swift Package Manager
 
 **Swift Package Manager (requires Xcode 11)**
-Add package into Project settings -> Swift Packages
+Add package into Project settings -> Swift Packages -> Repo URL
 
 ### Cocoapods
 
