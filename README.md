@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Tom.svg)](https://github.com/Retro-Cartoons/Tom)
 [![License](https://img.shields.io/cocoapods/l/Tom.svg)](https://github.com/Retro-Cartoons/Tom)
 [![Platform](https://img.shields.io/cocoapods/p/Tom.svg)](https://github.com/Retro-Cartoons/Tom)
+[![SPM Compatible](https://img.shields.io/badge/SPM-1.0.0-brightgreen.svg)](https://swift.org/package-manager)
 
 - [Demo](#demo)
 - [Requirements](#requirements)
@@ -25,6 +26,11 @@
 - Swift 5.1+
 
 ## Installation
+
+## Swift Package Manager
+
+**Swift Package Manager (requires Xcode 11)**
+Add package into Project settings -> Swift Packages
 
 ### Cocoapods
 
