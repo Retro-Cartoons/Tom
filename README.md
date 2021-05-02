@@ -5,15 +5,16 @@
 [![License](https://img.shields.io/cocoapods/l/Tom.svg)](https://github.com/Retro-Cartoons/Tom)
 [![Platform](https://img.shields.io/cocoapods/p/Tom.svg)](https://github.com/Retro-Cartoons/Tom)
 
-- [Example](#example)
+- [Demo](#demo)
 - [Requirements](#requirements)
 - [Installation](#installation)
   - [Cocoapods](#cocoapods)
+- [Usage](#usage)
+  - [XIB](#xib)
+  - [Programmatically](#programmatically)
 - [License](#license)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Demo
 
 ![GIF](https://media.giphy.com/media/OoC14F1Xz8QzmnCAeO/giphy.gif)
 
@@ -29,6 +30,28 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ```ruby
 pod 'Tom'
+```
+
+## Usage
+
+**Properties**
+```
+lineCount: Int = 8
+lineColor: UIColor = .black
+lineSpacing: CGFloat = 8
+minLineThickness: CGFloat = 8
+animationSpeed: Double = 0.25
+Vertical: Bool = false
+```
+
+### XIB
+
+![StoryboardImplementation](https://live.staticflickr.com/65535/51152721631_949e468489_m.jpg)
+
+### Programmatically
+
+```
+TomView(configuration: .init(lineCount: 20, lineColor: .black))
 ```
 
 ## License
