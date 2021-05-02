@@ -5,6 +5,9 @@
 //  Created by Yusuf Demirci on 30.03.21.
 //
 
+import class UIKit.UIView
+import class Foundation.NSCoder
+
 class LineView: UIView {
 
     // MARK: Properties

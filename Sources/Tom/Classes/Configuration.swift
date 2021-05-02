@@ -5,6 +5,11 @@
 //  Created by Yusuf Demirci on 30.03.21.
 //
 
+import class UIKit.UIColor
+import class UIKit.NSLayoutConstraint
+import struct CoreGraphics.CGFloat
+import typealias UIKit.TimeInterval
+
 /// Configuration parameters for TomView.
 public struct Configuration {
     

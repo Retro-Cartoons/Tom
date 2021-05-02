@@ -5,6 +5,14 @@
 //  Created by Yusuf Demirci on 30.03.21.
 //
 
+import class UIKit.UIView
+import class UIKit.UIColor
+import class UIKit.UIStackView
+import class UIKit.NSLayoutConstraint
+import struct CoreGraphics.CGFloat
+import struct CoreGraphics.CGRect
+import class Foundation.NSCoder
+
 @IBDesignable
 final public class TomView: UIView {
 

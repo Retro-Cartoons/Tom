@@ -5,6 +5,9 @@
 //  Created by Yusuf Demirci on 30.03.21.
 //
 
+import class UIKit.UIView
+import class UIKit.NSLayoutConstraint
+
 extension UIView {
     
     var heightConstraint: NSLayoutConstraint? {
