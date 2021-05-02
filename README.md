@@ -15,7 +15,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-[![GIF](https://media.giphy.com/media/OoC14F1Xz8QzmnCAeO/giphy.gif)]
+![GIF](https://media.giphy.com/media/OoC14F1Xz8QzmnCAeO/giphy.gif)
 
 ## Requirements
 
