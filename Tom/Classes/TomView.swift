@@ -10,41 +10,42 @@ final public class TomView: UIView {
 
     // MARK: Properties
     
+    /// Determines how many lines will be in TomView.
     @IBInspectable
     public var lineCount: Int = 8 {
         didSet {
             setup()
         }
     }
-    
+    /// Determines the color of the lines in TomView.
     @IBInspectable
     public var lineColor: UIColor = .black {
         didSet {
             setup()
         }
     }
-    
+    /// Determines spacing between each line.
     @IBInspectable
     public var lineSpacing: CGFloat = 8 {
         didSet {
             setup()
         }
     }
-    
+    /// Determines minimum line thickness in TomView
     @IBInspectable
     public var minLineThickness: CGFloat = 8 {
         didSet {
             setup()
         }
     }
-    
+    /// Determines animation duration for the line animation.
     @IBInspectable
     public var animationSpeed: Double = 0.25 {
         didSet {
             setup()
         }
     }
-    
+    /// Determines axis of lines, horizontal or vertical.
     @IBInspectable
     public var Vertical: Bool {
         get {
