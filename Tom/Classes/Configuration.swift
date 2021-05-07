@@ -19,14 +19,14 @@ public struct Configuration {
     /// Determines minimum line thickness in TomView
     public let minLineThickness: CGFloat
     /// Determines animation duration for the line animation.
-    public let animationSpeed: TimeInterval
+    public let animationSpeed: Double
 
     public init(lineCount: Int,
                 lineColor: UIColor,
                 lineSpacing: CGFloat = 8,
                 axis: NSLayoutConstraint.Axis = .horizontal,
                 minLineThickness: CGFloat = 8,
-                animationSpeed: TimeInterval = 0.25) {
+                animationSpeed: Double = 0.25) {
         self.lineCount = lineCount
         self.lineColor = lineColor
         self.lineSpacing = lineSpacing
