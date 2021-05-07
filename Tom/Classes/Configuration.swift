@@ -14,7 +14,7 @@ public struct Configuration {
     public let lineColor: UIColor
     /// Determines spacing between each line.
     public let lineSpacing: CGFloat
-    /// /// Determines axis of lines, horizontal or vertical.
+    /// Determines axis of lines, horizontal or vertical.
     public let axis: NSLayoutConstraint.Axis
     /// Determines minimum line thickness in TomView
     public let minLineThickness: CGFloat
