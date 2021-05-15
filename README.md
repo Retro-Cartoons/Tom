@@ -9,7 +9,7 @@
 - [Demo](#demo)
 - [Requirements](#requirements)
 - [Installation](#installation)
-  - [SPM](#Swift Package Manager)
+  - [SPM](#swift-package-manager)
   - [Cocoapods](#cocoapods)
 - [Usage](#usage)
   - [XIB](#xib)
