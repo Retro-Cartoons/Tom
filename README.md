@@ -32,7 +32,16 @@
 
 **Swift Package Manager (requires Xcode 11)**
 Add package into Project settings -> Swift Packages -> Repo URL
+1. File > Swift Packages > Add Package Dependency
+2. Add `https://github.com/Retro-Cartoons/Tom.git`
 
+_OR_
+
+Update `dependencies` in `Package.swift`
+```swift
+dependencies: [
+    .package(url: "https://github.com/Retro-Cartoons/Tom.git", .upToNextMajor(from: "1.0.0"))
+]
 ### Cocoapods
 
 ```ruby
