@@ -35,7 +35,7 @@ pod 'Tom'
 ## Usage
 
 **Properties**
-```
+```swift
 lineCount: Int = 8
 lineColor: UIColor = .black
 lineSpacing: CGFloat = 8
@@ -50,7 +50,7 @@ Vertical: Bool = false
 
 ### Programmatically
 
-```
+```swift
 TomView(configuration: .init(lineCount: 20, lineColor: .black))
 ```
 
