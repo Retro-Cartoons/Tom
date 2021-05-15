@@ -2,7 +2,7 @@
 
 [![CI Status](https://github.com/Retro-Cartoons/Tom/workflows/Tom%20CI/badge.svg?branch=main)](https://github.com/Retro-Cartoons/Tom/actions)
 [![Version](https://img.shields.io/cocoapods/v/Tom.svg)](https://github.com/Retro-Cartoons/Tom)
-[![SPM](https://img.shields.io/badge/spm-v1.0.0-blue.svg)](https://swift.org/package-manager)
+[![SPM](https://img.shields.io/badge/spm-compatible-brightgreen.svg)](https://swift.org/package-manager)
 [![License](https://img.shields.io/cocoapods/l/Tom.svg)](https://github.com/Retro-Cartoons/Tom)
 [![Platform](https://img.shields.io/cocoapods/p/Tom.svg)](https://github.com/Retro-Cartoons/Tom)
 
