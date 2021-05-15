@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06B9C99F788D2F77D9056811A31EFBAD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DD8A3E557EBAFED37581EB50745845 /* UIView+Extension.swift */; };
-		0942B0F60D58C196527D161CE38E154A /* TomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD17C0F55E2B9A258AC04A99FA3837C /* TomView.swift */; };
 		0B098C4AE36A7A83084A7D44AB29E3E1 /* Pods-Tom_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C0735BFC16354C7D7350D551AF74953 /* Pods-Tom_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45908CBA39EAD1B09DE67187BCDC49B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		797FA320745D3DE4D7F9AEAB483F6C55 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B46D44EE17DEC727B351B70E983CB2D /* CornerRadius.swift */; };
-		7F0E2832A59E156244D271C2892A3CC7 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6FC1BD5EA1CF9B6FAB955A51FDB0CA /* Configuration.swift */; };
+		0C3E5E406AFE058C596EA9B76AF642A5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873793FB839F5DEF246589B5932F8200 /* Configuration.swift */; };
+		1BCFC117DDEA2CC35D441ACD14805932 /* LineConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B69D8C848EAB1191FB12ECB19926DB /* LineConfiguration.swift */; };
+		32B4C4C174580D6190EE32B18A1A9DBA /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C0AF915708B8A47F2ED28DAF6330A2 /* CornerRadius.swift */; };
+		44D630188280EA58699C22AA1F9EC9DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		872A5021968A253999BB65E89B53986E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518685FDC841BDBF286E6D5634C1F7A6 /* UIView+Extension.swift */; };
 		8AD28DA32F9531D5FB7135FB95BBAFA8 /* Pods-Tom_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41EE257F745623F2D197F2D98C1F9EC2 /* Pods-Tom_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BEFEE97B0A31AD5A77AADD3F309F3680 /* LineConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7EF51617269ACC1E0F28E157ABF659 /* LineConfiguration.swift */; };
+		981A4D47E7F144AFC71BCE29DE5F6CF2 /* Tom-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2A565BAE804BDDA51D919A090097B /* Tom-dummy.m */; };
+		9FFAE92CCDF7CD1B1002A951B5BE4659 /* Tom-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 291A4BFBA1B53F695AFDA8A46D7B18E2 /* Tom-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2836157DD698E877B37E37027B046A7 /* TomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C511A73057479C3D36555923E665F8F /* TomView.swift */; };
 		BF6B25FC4679D00BBCEC40FCC3D1C5E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		C4D7045F6C2CE3B58730490C951D06E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C6B5512616355D827A0AB336B0335BFC /* Tom-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 093BD13D566C7881FE7E5E52E2AE89D3 /* Tom-dummy.m */; };
-		CC2EC37E3D3E429934DB4DAECDE11321 /* Tom-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66712A3AFF3E0CEBB5A534B3C34DDA31 /* Tom-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC8A872093A88C5A4D216560848C7394 /* Pods-Tom_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E47B46B75A10737340C670C9DBBE4F /* Pods-Tom_Tests-dummy.m */; };
 		CE31411964877354E568014CDA35E6B0 /* Pods-Tom_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4275D89FA7F60CD91115038FF65CB7B /* Pods-Tom_Example-dummy.m */; };
-		F19708353790D88DAE4A0776E84DB1AC /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A22915C6A837624509C5248A0B5AA8B /* LineView.swift */; };
+		E0A3B93CA17DEADA8FBE492A9D040808 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F54960173084016F0604EF9FBE661F /* LineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B016BBE6C377ECF82699387B4C7DDEE /* PBXContainerItemProxy */ = {
+		5154D8411E0F78DE4D3DB1847BD3639F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8986AD50115397B43949BFFFFC25BFA8;
 			remoteInfo = Tom;
 		};
-		B2E2700C42BD5812F980B2D5BA6AE869 /* PBXContainerItemProxy */ = {
+		5DF03F280F45305BDDF119E55A33D2BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -43,51 +43,51 @@
 
 /* Begin PBXFileReference section */
 		0599827F7E6AE4E0BB54C7CFA4BEFDAB /* Pods-Tom_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tom_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		093BD13D566C7881FE7E5E52E2AE89D3 /* Tom-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Tom-dummy.m"; sourceTree = "<group>"; };
 		0A2068CCE9AE2C0052FF751903496697 /* Pods-Tom_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tom_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		0FD17C0F55E2B9A258AC04A99FA3837C /* TomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TomView.swift; path = Sources/Tom/Classes/TomView.swift; sourceTree = "<group>"; };
-		1B46D44EE17DEC727B351B70E983CB2D /* CornerRadius.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CornerRadius.swift; path = Sources/Tom/Classes/CornerRadius.swift; sourceTree = "<group>"; };
-		2F73FA8DFD8082512457483206F75D82 /* Tom.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Tom.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		291A4BFBA1B53F695AFDA8A46D7B18E2 /* Tom-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tom-umbrella.h"; sourceTree = "<group>"; };
+		3A8DED5302C0A940206359428BB60519 /* Tom.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Tom.modulemap; sourceTree = "<group>"; };
+		416B044626CF1B2F4D669221B4540B58 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		41EE257F745623F2D197F2D98C1F9EC2 /* Pods-Tom_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tom_Example-umbrella.h"; sourceTree = "<group>"; };
+		42F54960173084016F0604EF9FBE661F /* LineView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineView.swift; path = Sources/Tom/Classes/LineView.swift; sourceTree = "<group>"; };
+		44C0AF915708B8A47F2ED28DAF6330A2 /* CornerRadius.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CornerRadius.swift; path = Sources/Tom/Classes/CornerRadius.swift; sourceTree = "<group>"; };
+		4FD606F38762425CD2D376507FD32DB8 /* Tom.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Tom.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		518685FDC841BDBF286E6D5634C1F7A6 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Sources/Tom/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
 		5BC909359638986192AAF31A69A243BD /* Pods-Tom_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tom_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5C80285270DB1BB750A2BD5C1A7BDE83 /* Tom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tom.debug.xcconfig; sourceTree = "<group>"; };
-		66712A3AFF3E0CEBB5A534B3C34DDA31 /* Tom-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tom-umbrella.h"; sourceTree = "<group>"; };
-		7289B1D8CDAE51E9B8D27BCED0AA0BDD /* Pods_Tom_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tom_Tests.framework; path = "Pods-Tom_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		619305D072594A528F313D932930F056 /* Tom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tom.release.xcconfig; sourceTree = "<group>"; };
+		71831256D62CA182E4E2423F53D41DB4 /* Tom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tom.debug.xcconfig; sourceTree = "<group>"; };
+		7289B1D8CDAE51E9B8D27BCED0AA0BDD /* Pods_Tom_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tom_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		777FFCBDFD31AF561B99BF36A012DA86 /* Pods-Tom_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tom_Tests-Info.plist"; sourceTree = "<group>"; };
-		7A22915C6A837624509C5248A0B5AA8B /* LineView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineView.swift; path = Sources/Tom/Classes/LineView.swift; sourceTree = "<group>"; };
+		7AB35B4BB961BCFA768AFFCD759A1410 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7FD2A565BAE804BDDA51D919A090097B /* Tom-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Tom-dummy.m"; sourceTree = "<group>"; };
 		7FED2B12E54A8DB9476AA34F62EB2890 /* Pods-Tom_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tom_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		8261BAB9E18285C6859F3C23731C826B /* Pods-Tom_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tom_Tests.modulemap"; sourceTree = "<group>"; };
 		85F64DEBF6B9049B5C1983F0457D702F /* Pods-Tom_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tom_Example-frameworks.sh"; sourceTree = "<group>"; };
-		876B14667B11E781A30D391AD4AC7AB4 /* Tom.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Tom.modulemap; sourceTree = "<group>"; };
-		8EA67A3F3B118638033278FB4B77B443 /* Tom-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tom-prefix.pch"; sourceTree = "<group>"; };
+		873793FB839F5DEF246589B5932F8200 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Tom/Classes/Configuration.swift; sourceTree = "<group>"; };
 		9651848EF2645D56D3AAB0FCD09D3C67 /* Pods-Tom_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tom_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		975C18A05DF2886A3EB2067C5080A153 /* Pods-Tom_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tom_Example.modulemap"; sourceTree = "<group>"; };
-		99798340E2DBFBBE5D1F5F0CC06B4EB9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		99957A6ADE44F5E8F638E75D8B949160 /* Tom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Tom.framework; path = Tom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99957A6ADE44F5E8F638E75D8B949160 /* Tom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0735BFC16354C7D7350D551AF74953 /* Pods-Tom_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tom_Tests-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E7EF51617269ACC1E0F28E157ABF659 /* LineConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineConfiguration.swift; path = Sources/Tom/Classes/LineConfiguration.swift; sourceTree = "<group>"; };
+		9C511A73057479C3D36555923E665F8F /* TomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TomView.swift; path = Sources/Tom/Classes/TomView.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AAADAA825E1083E58531A18C4F1BB0C5 /* Tom-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tom-prefix.pch"; sourceTree = "<group>"; };
 		AAC8BDA1BCF82A27D405303524176F5C /* Pods-Tom_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tom_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C3DD8A3E557EBAFED37581EB50745845 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Sources/Tom/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
 		C4275D89FA7F60CD91115038FF65CB7B /* Pods-Tom_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tom_Example-dummy.m"; sourceTree = "<group>"; };
 		D0928630EF2313DBC7D7C0CC101ACD02 /* Pods-Tom_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tom_Example-Info.plist"; sourceTree = "<group>"; };
-		D10B51B6C4FDD0B6141860D1B5F5B66F /* Tom-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Tom-Info.plist"; sourceTree = "<group>"; };
 		D11D861CD752EEDBBA49C1EA37577769 /* Pods-Tom_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tom_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D5E0DCDCA7F52DF7359A3EB66565FF24 /* Pods_Tom_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tom_Example.framework; path = "Pods-Tom_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5E0DCDCA7F52DF7359A3EB66565FF24 /* Pods_Tom_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tom_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97FB1D600C597EFAD3E9C3A129C9D58 /* Pods-Tom_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tom_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E34E28D1A253DC088062E861E9FC63EB /* Tom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tom.release.xcconfig; sourceTree = "<group>"; };
 		E6E47B46B75A10737340C670C9DBBE4F /* Pods-Tom_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tom_Tests-dummy.m"; sourceTree = "<group>"; };
-		EA6FC1BD5EA1CF9B6FAB955A51FDB0CA /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Tom/Classes/Configuration.swift; sourceTree = "<group>"; };
-		FEC9C2FDBBFD0376C6BC91CF8342691F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F08A4E0D54F9CDDC1F4F49DE91AD5A36 /* Tom-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Tom-Info.plist"; sourceTree = "<group>"; };
+		F2B69D8C848EAB1191FB12ECB19926DB /* LineConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineConfiguration.swift; path = Sources/Tom/Classes/LineConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5A87B4E5473FC8D5FDE37AC290DD9D19 /* Frameworks */ = {
+		934A1EB7353EC95C61AEF842745D0619 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45908CBA39EAD1B09DE67187BCDC49B8 /* Foundation.framework in Frameworks */,
+				44D630188280EA58699C22AA1F9EC9DC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,14 +110,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02CBD584211CFA654F3653BCEE01252A /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6D99E09EFFB16A2795FC1F16C190512E /* Tom */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		20C5EA5C646E133950EDDE84EF7E99F7 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +119,51 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		57201C3D1FDA3B2A4B2091FB080A5F6C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				677005FF5510BDBDDFF3FC23CAEE439B /* Tom */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		640176424A408E6CAF1C79D66BB8F6D3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A8DED5302C0A940206359428BB60519 /* Tom.modulemap */,
+				7FD2A565BAE804BDDA51D919A090097B /* Tom-dummy.m */,
+				F08A4E0D54F9CDDC1F4F49DE91AD5A36 /* Tom-Info.plist */,
+				AAADAA825E1083E58531A18C4F1BB0C5 /* Tom-prefix.pch */,
+				291A4BFBA1B53F695AFDA8A46D7B18E2 /* Tom-umbrella.h */,
+				71831256D62CA182E4E2423F53D41DB4 /* Tom.debug.xcconfig */,
+				619305D072594A528F313D932930F056 /* Tom.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Tom";
+			sourceTree = "<group>";
+		};
+		677005FF5510BDBDDFF3FC23CAEE439B /* Tom */ = {
+			isa = PBXGroup;
+			children = (
+				873793FB839F5DEF246589B5932F8200 /* Configuration.swift */,
+				44C0AF915708B8A47F2ED28DAF6330A2 /* CornerRadius.swift */,
+				F2B69D8C848EAB1191FB12ECB19926DB /* LineConfiguration.swift */,
+				42F54960173084016F0604EF9FBE661F /* LineView.swift */,
+				9C511A73057479C3D36555923E665F8F /* TomView.swift */,
+				518685FDC841BDBF286E6D5634C1F7A6 /* UIView+Extension.swift */,
+				C72062B8143CF0878D11FEE48593A09E /* Pod */,
+				640176424A408E6CAF1C79D66BB8F6D3 /* Support Files */,
+			);
+			name = Tom;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		6A7F16C64ECD5B94B9C73AE12C63C97F /* Pods-Tom_Example */ = {
@@ -152,22 +183,6 @@
 			path = "Target Support Files/Pods-Tom_Example";
 			sourceTree = "<group>";
 		};
-		6D99E09EFFB16A2795FC1F16C190512E /* Tom */ = {
-			isa = PBXGroup;
-			children = (
-				EA6FC1BD5EA1CF9B6FAB955A51FDB0CA /* Configuration.swift */,
-				1B46D44EE17DEC727B351B70E983CB2D /* CornerRadius.swift */,
-				9E7EF51617269ACC1E0F28E157ABF659 /* LineConfiguration.swift */,
-				7A22915C6A837624509C5248A0B5AA8B /* LineView.swift */,
-				0FD17C0F55E2B9A258AC04A99FA3837C /* TomView.swift */,
-				C3DD8A3E557EBAFED37581EB50745845 /* UIView+Extension.swift */,
-				FBFBE067231DAF7AC71AB60E2ED29021 /* Pod */,
-				F91AE09451F12FF19BD8017B5BD44543 /* Support Files */,
-			);
-			name = Tom;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		9D6D3D26A12D1285B145C344197B7605 /* Pods-Tom_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +199,16 @@
 			path = "Target Support Files/Pods-Tom_Tests";
 			sourceTree = "<group>";
 		};
+		C72062B8143CF0878D11FEE48593A09E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				416B044626CF1B2F4D669221B4540B58 /* LICENSE */,
+				7AB35B4BB961BCFA768AFFCD759A1410 /* README.md */,
+				4FD606F38762425CD2D376507FD32DB8 /* Tom.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		C8564AF68A1E66A79A8ABD8876DB1806 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				02CBD584211CFA654F3653BCEE01252A /* Development Pods */,
+				57201C3D1FDA3B2A4B2091FB080A5F6C /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				C8564AF68A1E66A79A8ABD8876DB1806 /* Products */,
 				20C5EA5C646E133950EDDE84EF7E99F7 /* Targets Support Files */,
@@ -213,39 +238,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F91AE09451F12FF19BD8017B5BD44543 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				876B14667B11E781A30D391AD4AC7AB4 /* Tom.modulemap */,
-				093BD13D566C7881FE7E5E52E2AE89D3 /* Tom-dummy.m */,
-				D10B51B6C4FDD0B6141860D1B5F5B66F /* Tom-Info.plist */,
-				8EA67A3F3B118638033278FB4B77B443 /* Tom-prefix.pch */,
-				66712A3AFF3E0CEBB5A534B3C34DDA31 /* Tom-umbrella.h */,
-				5C80285270DB1BB750A2BD5C1A7BDE83 /* Tom.debug.xcconfig */,
-				E34E28D1A253DC088062E861E9FC63EB /* Tom.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Tom";
-			sourceTree = "<group>";
-		};
-		FBFBE067231DAF7AC71AB60E2ED29021 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				FEC9C2FDBBFD0376C6BC91CF8342691F /* LICENSE */,
-				99798340E2DBFBBE5D1F5F0CC06B4EB9 /* README.md */,
-				2F73FA8DFD8082512457483206F75D82 /* Tom.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		725905F2BD00C9179E411B6C3F718435 /* Headers */ = {
+		98E1F4EAD3766D7DF2559F4F1FDE0623 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC2EC37E3D3E429934DB4DAECDE11321 /* Tom-umbrella.h in Headers */,
+				9FFAE92CCDF7CD1B1002A951B5BE4659 /* Tom-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +280,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				385BCD710A960C9C1437249D61D8A207 /* PBXTargetDependency */,
+				04C8C6DA47417BC4ED9C939E0A061D13 /* PBXTargetDependency */,
 			);
 			name = "Pods-Tom_Example";
 			productName = "Pods-Tom_Example";
@@ -299,7 +299,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D652C1A4C00151A3A7DF74E303D9DCAB /* PBXTargetDependency */,
+				D1E2E04BFBE374E7CEF2FDB602266CD1 /* PBXTargetDependency */,
 			);
 			name = "Pods-Tom_Tests";
 			productName = "Pods-Tom_Tests";
@@ -308,12 +308,12 @@
 		};
 		8986AD50115397B43949BFFFFC25BFA8 /* Tom */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1739D364D87CD701DACA3FF95DEA06F /* Build configuration list for PBXNativeTarget "Tom" */;
+			buildConfigurationList = 77C121E38C30606739DFF6252D5350D0 /* Build configuration list for PBXNativeTarget "Tom" */;
 			buildPhases = (
-				725905F2BD00C9179E411B6C3F718435 /* Headers */,
-				D17733AB774F4310A61F052F60A83148 /* Sources */,
-				5A87B4E5473FC8D5FDE37AC290DD9D19 /* Frameworks */,
-				266D17D2986417457F0D374AF0C0D735 /* Resources */,
+				98E1F4EAD3766D7DF2559F4F1FDE0623 /* Headers */,
+				50D7DBE20B547D7EA14CF49C5A72368D /* Sources */,
+				934A1EB7353EC95C61AEF842745D0619 /* Frameworks */,
+				C79BCBBEF8CF1028DC0D8D3522C0E052 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -354,13 +354,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		266D17D2986417457F0D374AF0C0D735 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		559931C23047A4E2D6E15D56428B1B44 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,9 +368,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C79BCBBEF8CF1028DC0D8D3522C0E052 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		50D7DBE20B547D7EA14CF49C5A72368D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3E5E406AFE058C596EA9B76AF642A5 /* Configuration.swift in Sources */,
+				32B4C4C174580D6190EE32B18A1A9DBA /* CornerRadius.swift in Sources */,
+				1BCFC117DDEA2CC35D441ACD14805932 /* LineConfiguration.swift in Sources */,
+				E0A3B93CA17DEADA8FBE492A9D040808 /* LineView.swift in Sources */,
+				981A4D47E7F144AFC71BCE29DE5F6CF2 /* Tom-dummy.m in Sources */,
+				A2836157DD698E877B37E37027B046A7 /* TomView.swift in Sources */,
+				872A5021968A253999BB65E89B53986E /* UIView+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C733D8311F440568DAD2962D922A31F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -394,41 +408,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D17733AB774F4310A61F052F60A83148 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7F0E2832A59E156244D271C2892A3CC7 /* Configuration.swift in Sources */,
-				797FA320745D3DE4D7F9AEAB483F6C55 /* CornerRadius.swift in Sources */,
-				BEFEE97B0A31AD5A77AADD3F309F3680 /* LineConfiguration.swift in Sources */,
-				F19708353790D88DAE4A0776E84DB1AC /* LineView.swift in Sources */,
-				C6B5512616355D827A0AB336B0335BFC /* Tom-dummy.m in Sources */,
-				0942B0F60D58C196527D161CE38E154A /* TomView.swift in Sources */,
-				06B9C99F788D2F77D9056811A31EFBAD /* UIView+Extension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		385BCD710A960C9C1437249D61D8A207 /* PBXTargetDependency */ = {
+		04C8C6DA47417BC4ED9C939E0A061D13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Tom;
 			target = 8986AD50115397B43949BFFFFC25BFA8 /* Tom */;
-			targetProxy = 3B016BBE6C377ECF82699387B4C7DDEE /* PBXContainerItemProxy */;
+			targetProxy = 5154D8411E0F78DE4D3DB1847BD3639F /* PBXContainerItemProxy */;
 		};
-		D652C1A4C00151A3A7DF74E303D9DCAB /* PBXTargetDependency */ = {
+		D1E2E04BFBE374E7CEF2FDB602266CD1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Tom_Example";
 			target = 4A213C00FABD8167EECA2B40D97EF8F0 /* Pods-Tom_Example */;
-			targetProxy = B2E2700C42BD5812F980B2D5BA6AE869 /* PBXContainerItemProxy */;
+			targetProxy = 5DF03F280F45305BDDF119E55A33D2BC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		477DA34EC80F9E2C7EF5FB1FD5BB3948 /* Release */ = {
+		35E682257C4F6FE10109700A395DC3B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E34E28D1A253DC088062E861E9FC63EB /* Tom.release.xcconfig */;
+			baseConfigurationReference = 71831256D62CA182E4E2423F53D41DB4 /* Tom.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -453,11 +453,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		523531E6DF0E733BCAF8E42C729AF1FC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -492,6 +491,39 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		537F0344F25852BD8A99561336932A50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619305D072594A528F313D932930F056 /* Tom.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Tom/Tom-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Tom/Tom-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Tom/Tom.modulemap";
+				PRODUCT_MODULE_NAME = Tom;
+				PRODUCT_NAME = Tom;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		5D55DA855936E97B4ADF7618E1AE25B6 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -649,8 +681,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -725,38 +756,6 @@
 			};
 			name = Debug;
 		};
-		DF9CF8CBCB17C60F6E3536D9D3E19AB9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C80285270DB1BB750A2BD5C1A7BDE83 /* Tom.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Tom/Tom-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Tom/Tom-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Tom/Tom.modulemap";
-				PRODUCT_MODULE_NAME = Tom;
-				PRODUCT_NAME = Tom;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -778,11 +777,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1739D364D87CD701DACA3FF95DEA06F /* Build configuration list for PBXNativeTarget "Tom" */ = {
+		77C121E38C30606739DFF6252D5350D0 /* Build configuration list for PBXNativeTarget "Tom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DF9CF8CBCB17C60F6E3536D9D3E19AB9 /* Debug */,
-				477DA34EC80F9E2C7EF5FB1FD5BB3948 /* Release */,
+				35E682257C4F6FE10109700A395DC3B6 /* Debug */,
+				537F0344F25852BD8A99561336932A50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
