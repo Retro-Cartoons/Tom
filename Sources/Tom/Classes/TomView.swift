@@ -5,6 +5,8 @@
 //  Created by Yusuf Demirci on 30.03.21.
 //
 
+import UIKit
+
 @IBDesignable
 final public class TomView: UIView {
 
