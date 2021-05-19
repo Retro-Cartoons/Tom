@@ -1,5 +1,5 @@
 PODS:
-  - Tom (1.0.0)
+  - Tom (1.1.0)
 
 DEPENDENCIES:
   - Tom (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Tom: ceeae09fed82560a4258ec91f71d4c55983304e6
+  Tom: 7dacb60954c6ae5ae4264517c1e4c990bf69c210
 
 PODFILE CHECKSUM: 7f8b3cc00024e30cac45f9e2ce09af8a26277bd3
 
