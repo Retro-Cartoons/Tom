@@ -217,6 +217,7 @@ private extension TomView {
             lineView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0).isActive = true
             lineView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 0).isActive = true
             lineView.widthAnchor.constraint(equalToConstant: minLineThickness).isActive = true
+            lineView.heightAnchor.constraint(greaterThanOrEqualToConstant: minLineThickness).isActive = true
         @unknown default:
             break
         }
