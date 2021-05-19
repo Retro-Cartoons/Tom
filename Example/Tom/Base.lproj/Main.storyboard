@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +20,99 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49V-OA-qOG">
+                                <rect key="frame" x="0.0" y="32" width="375" height="211"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="49V-OA-qOG" secondAttribute="height" multiplier="16:9" id="n6z-f4-olp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4b-jI-vGs" customClass="TomView" customModule="Tom">
+                                <rect key="frame" x="67.5" y="307" width="240" height="136"/>
+                                <color key="backgroundColor" name="retroCartoonsYellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="LHj-K3-Jy7"/>
+                                    <constraint firstAttribute="height" constant="136" id="xGe-z5-XlO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineCount">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" name="retroCartoonsBlack"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minLineHeight">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="axis">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="dE1-BO-tBb">
+                                <rect key="frame" x="48" y="553" width="279" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-lM-Meq">
+                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="50"/>
+                                        <color key="backgroundColor" name="retroCartoonsBlack"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" name="retroCartoonsYellow"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dzC-Lk-WL1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8z-Qn-dLS">
+                                        <rect key="frame" x="155.5" y="0.0" width="123.5" height="50"/>
+                                        <color key="backgroundColor" name="retroCartoonsBlack"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" name="retroCartoonsYellow"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iRx-yt-jwO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JhH-Pz-Ra3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="retroCartoonsYellow"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dE1-BO-tBb" secondAttribute="trailing" constant="32" id="1tv-gC-0kF"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dE1-BO-tBb" secondAttribute="bottom" constant="64" id="Bf9-g4-NVY"/>
+                            <constraint firstItem="W4b-jI-vGs" firstAttribute="top" secondItem="49V-OA-qOG" secondAttribute="bottom" constant="64" id="D4f-Y8-5pC"/>
+                            <constraint firstItem="49V-OA-qOG" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="IIB-6e-EB2"/>
+                            <constraint firstItem="49V-OA-qOG" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="32" id="Id0-Yg-PTn"/>
+                            <constraint firstItem="W4b-jI-vGs" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="N5D-ps-Gkg"/>
+                            <constraint firstItem="49V-OA-qOG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="hpV-9Z-Z77"/>
+                            <constraint firstAttribute="trailing" secondItem="49V-OA-qOG" secondAttribute="trailing" id="mQu-Vw-iuD"/>
+                            <constraint firstItem="dE1-BO-tBb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="32" id="nqX-qg-qkK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playerContainerView" destination="49V-OA-qOG" id="fKp-Gv-Lvy"/>
+                        <outlet property="startButton" destination="Ngp-lM-Meq" id="ThY-lW-Kg8"/>
+                        <outlet property="stopButton" destination="J8z-Qn-dLS" id="Ajj-US-YCk"/>
+                        <outlet property="tomView" destination="W4b-jI-vGs" id="bYy-Ab-XO6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="111"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="retroCartoonsBlack">
+            <color red="0.13699999451637268" green="0.082000002264976501" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="retroCartoonsYellow">
+            <color red="0.89399999380111694" green="0.72899997234344482" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

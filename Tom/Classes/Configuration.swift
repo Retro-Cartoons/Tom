@@ -5,24 +5,33 @@
 //  Created by Yusuf Demirci on 30.03.21.
 //
 
+/// Configuration parameters for TomView.
 public struct Configuration {
-
+    
+    /// Determines how many lines will be in TomView.
     public let lineCount: Int
+    /// Determines the color of the lines in TomView.
     public let lineColor: UIColor
+    /// Determines spacing between each line.
     public let lineSpacing: CGFloat
-    public let axis: UILayoutConstraintAxis = .horizontal
-    public let minLineHeight: CGFloat
+    /// /// Determines axis of lines, horizontal or vertical.
+    public let axis: NSLayoutConstraint.Axis
+    /// Determines minimum line thickness in TomView
+    public let minLineThickness: CGFloat
+    /// Determines animation duration for the line animation.
     public let animationSpeed: TimeInterval
 
     public init(lineCount: Int,
                 lineColor: UIColor,
-                spacing: CGFloat = 8,
-                minLineHeight: CGFloat = 8,
+                lineSpacing: CGFloat = 8,
+                axis: NSLayoutConstraint.Axis = .horizontal,
+                minLineThickness: CGFloat = 8,
                 animationSpeed: TimeInterval = 0.25) {
         self.lineCount = lineCount
         self.lineColor = lineColor
-        self.lineSpacing = spacing
-        self.minLineHeight = minLineHeight
+        self.lineSpacing = lineSpacing
+        self.axis = axis
+        self.minLineThickness = minLineThickness
         self.animationSpeed = animationSpeed
     }
 }
