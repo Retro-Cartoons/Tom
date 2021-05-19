@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Tom'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'A smooth, moving equalizer view'
   s.description      = <<-DESC
   Tom is a smooth, moving equilazer view written in Swift for iOS developers. 
